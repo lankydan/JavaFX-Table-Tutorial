@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="400.0" maxWidth="500.0" minHeight="400.0" minWidth="500.0" prefHeight="400.0" prefWidth="500.0" styleClass="root" stylesheets="lankydan/tutorials/fxml/css.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lankydan.tutorials.fxml.controller.TableAppController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <TableView fx:id="table" prefHeight="255.0" prefWidth="501.0" VBox.vgrow="ALWAYS">
+              <columns>
+                <TableColumn prefWidth="98.0" text="First Name">
+                	<cellValueFactory>
+                		<PropertyValueFactory property="firstName" />
+       				</cellValueFactory>
+        		</TableColumn>
+                <TableColumn prefWidth="111.0" text="Surname">
+                	<cellValueFactory>
+                		<PropertyValueFactory property="surname" />
+       				</cellValueFactory>
+        		</TableColumn>
+                 <TableColumn fx:id="dateOfBirthColumn" prefWidth="112.0" text="Date of Birth">
+                	<cellValueFactory>
+                		 <PropertyValueFactory property="dateOfBirth" />
+       				</cellValueFactory>
+        		</TableColumn>
+                  <TableColumn prefWidth="94.0" text="Occupation">
+                	<cellValueFactory>
+                		<PropertyValueFactory property="occupation" />
+       				</cellValueFactory>
+        		</TableColumn>
+                  <TableColumn fx:id="salaryColumn" prefWidth="113.0" text="Salary">
+                	<cellValueFactory>
+                		<PropertyValueFactory property="salary" />
+       				</cellValueFactory>
+        		</TableColumn>
+              </columns>
+            </TableView>
+            <AnchorPane VBox.vgrow="ALWAYS">
+               <children>
+                  <GridPane layoutX="14.0" prefHeight="146.0" prefWidth="333.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="14.0">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="85.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="507.0" minWidth="10.0" prefWidth="248.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Label text="First Name" />
+                        <Label text="Surname" GridPane.rowIndex="1" />
+                        <Label text="Date of Birth" GridPane.rowIndex="2" />
+                        <Label text="Occupation" GridPane.rowIndex="3" />
+                        <Label text="Salary" GridPane.rowIndex="4" />
+                        <TextField fx:id="firstNameTextField" GridPane.columnIndex="1" />
+                        <TextField fx:id="surnameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextField fx:id="dateOfBirthTextField" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                        <TextField fx:id="occupationTextField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <TextField fx:id="salaryTextField" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                     </children>
+                  </GridPane>
+                  <Button fx:id="submitButton" layoutX="371.0" layoutY="2.0" mnemonicParsing="false" onAction="#submit" text="Submit" AnchorPane.bottomAnchor="115.0" AnchorPane.leftAnchor="371.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
